@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 
-
+//la versión 2
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -27,6 +27,7 @@ public class AdaptadorLista extends BaseAdapter {
         this.ctx=ctx;
         this.libros=libros;
         inflater= LayoutInflater.from(ctx);
+
     }
 
 
