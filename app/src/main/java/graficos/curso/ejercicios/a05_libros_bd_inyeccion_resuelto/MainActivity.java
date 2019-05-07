@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this,ListadoActivity.class);
         this.startActivity(intent);
     }
+    public void buscar(View v){
+        Intent intent=new Intent(this,BuscarActivity.class);
+        this.startActivity(intent);
+    }
 }

@@ -76,4 +76,24 @@ public class DBLibros {
         db.delete("libros","titulo=?",new String[]{titulo});
         db.close();
     }
+
+
+    public Libro buscador(String titulo){
+        Libro lb=null;
+        Cursor c= db.query("libros",
+                new String[]{"_id", "titulo","precio","fecha"},
+                "titulo like ?",
+                new String[]{"%"+titulo+"%"},
+                null,
+                null,
+                null
+        );
+        if(c.moveToNext()){
+            lb=new Libro(c.getString(1),
+                    null,
+                    c.getFloat(2),
+                    new Date(c.getLong(3)));
+        }
+        return lb;
+    }
 }
